@@ -1,9 +1,93 @@
-*{
+:root {
+    --primary-color: #009879;
+}
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.heading {
+    color: var(--primary-color);
+    margin: 25px 200px 50px 200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.10);
+    padding: 20px;
+    border-radius: 10px;
 
 }
 
 .container {
-    display: flex;
+
+
+    width: 60vw;
+
+    margin: auto;
+    min-width: 100vw;
+    text-align: center;
+    display: block;
+}
+
+.change-table {
+    border-collapse: collapse;
     flex-direction: column;
-    width: 50vw;
+    width: 50%;
+    text-align: justify;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.20);
+   
+
+}
+
+.change-table th {
+    background-color: var(--primary-color);
+    color: white;
+
+
+}
+
+.change-table caption {
+    margin: 20px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.change-table th,
+.change-table td {
+    padding: 12px 12px;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+.change-table td:nth-last-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    max-width: 258px;
+    margin: 8px auto;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    font-size: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.10)
+
+}
+
+.input-label {
+    display: block;
+    margin-top: 30px;
+    font-weight: 550;
+}
+
+#check-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: 0px;
+    padding: 10px 30px;
+    margin: 20px;
+    font-size: 18px;
+    border-radius: 7px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.30);
 }
