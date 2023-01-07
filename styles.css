@@ -8,10 +8,13 @@
 
 .heading {
     color: var(--primary-color);
-    margin: 25px 200px 50px 200px;
+    margin: 25px auto 50px auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.10);
     padding: 20px;
     border-radius: 10px;
+    width: 60vw;
+    display: block;
+    
 
 }
 
