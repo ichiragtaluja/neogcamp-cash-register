@@ -22,18 +22,22 @@ function calculateChange(amountToBeReturned){
 
 function validateBillAndCashAmount() {
     errorMessage.style.display ="none";
-     if(billAmount.value > 0) {
-        if(billAmount.value <= cashGiven.value ) {
-            const amountToBeReturned = cashGiven.value - billAmount.value;
+
+    if (billAmount.value < 0) {
+        showMessage("Bill amount cannot be negative")
+     } else if (cashGiven.value < 0) {
+        showMessage("Cash cannot be negative")
+     }
+    else if(billAmount.value >= 0) {
+        if(Number(billAmount.value) <= Number(cashGiven.value)) {
+            const amountToBeReturned = Number(cashGiven.value) - Number(billAmount.value)
             calculateChange(amountToBeReturned);
         } else {
             showMessage("Cash cannot be less than the bill")
         }
        
      }
-     else {
-        showMessage("Invalid Amount")
-     }
+     
 }
 
 checkButton.addEventListener("click", validateBillAndCashAmount)
